@@ -1,4 +1,5 @@
 {
+  "plugins": ["react", "prettier"],
   "extends": [
     "eslint:recommended",
     "react-app",
@@ -30,13 +31,14 @@
       }
     }
   },
-  "plugins": ["react", "prettier"],
+
   "rules": {
     "class-methods-use-this": 1,
     "react/display-name": 0,
     "react/jsx-props-no-spreading": 0,
     "react/state-in-constructor": 0,
     "no-named-as-default": 0,
+    "linebreak-style": 0,
     "react/jsx-filename-extension": [
       1,
       {
