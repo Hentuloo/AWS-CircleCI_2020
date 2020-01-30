@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import UserCard from 'components/UserCard';
 
+import Clients from 'assets/clients.json';
+
 const Wrapper = styled.main``;
 const Bar = styled.aside`
   position: fixed;
@@ -39,29 +41,48 @@ const StyledUserCard = styled(UserCard)`
   margin: 25px auto;
 `;
 
-const App = () => (
-  <Wrapper>
-    <Bar>
-      <BarTitle>Klienci</BarTitle>
-    </Bar>
-    <Content>
-      <UsersWrapper>
-        <StyledUserCard
-          $as="li"
-          name="Krzystof Wichura"
-          age={18}
-          email="cjsdjao@o2.pl"
-          address={{
-            city: 'Gorzów',
-            street: 'Zielonogórska',
-            houseNumber: '18',
-          }}
-          sex={false}
-          avatar="https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_960_720.png"
-        />
-      </UsersWrapper>
-    </Content>
-  </Wrapper>
-);
+const App = () => {
+  const { data: ClientsArray } = Clients;
+  console.log(ClientsArray);
+  return (
+    <Wrapper>
+      <Bar>
+        <BarTitle>Klienci</BarTitle>
+      </Bar>
+      <Content>
+        <UsersWrapper>
+          {ClientsArray
+            ? ClientsArray.map(
+              ({
+                address: { city, street, houseNumber },
+                _id,
+                name,
+                email,
+                sex,
+                avatar,
+                age,
+              }) => (
+                <StyledUserCard
+                  key={_id}
+                  $as="li"
+                  name={name}
+                  age={age}
+                  email={email}
+                  address={{
+                    city,
+                    street,
+                    houseNumber,
+                  }}
+                  sex={sex}
+                  avatar={avatar}
+                />
+              ),
+            )
+            : null}
+        </UsersWrapper>
+      </Content>
+    </Wrapper>
+  );
+};
 
 export default App;

@@ -8,9 +8,7 @@ function Root() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <div>
-        <App />
-      </div>
+      <App />
     </ThemeProvider>
   );
 }

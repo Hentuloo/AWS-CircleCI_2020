@@ -12,7 +12,7 @@ import Button from 'components/Button';
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 93%;
+  width: 95%;
   max-width: 450px;
   margin: 0px auto;
   border-radius: 16px;
@@ -22,7 +22,7 @@ const HeaderBar = styled.div`
   display: grid;
   grid-template-columns: 1fr auto;
   width: 100%;
-  height: 70px;
+  min-height: 70px;
   padding: 5px 8px;
   border-radius: 16px 16px 0px 0px;
   background-color: ${({ theme }) => theme.color.blue[0]};
@@ -50,8 +50,9 @@ const Age = styled.small`
 `;
 const Email = styled.span`
   display: block;
-  font-size: ${({ theme }) => theme.fs.xs};
+  font-size: ${({ theme }) => theme.fs.xxs};
   color: ${({ theme }) => theme.color.gray[0]};
+  word-break: break-all;
   ${({ theme }) => theme.mediaQuery.md} {
     padding-top: 4px;
   }
@@ -88,31 +89,33 @@ const Image = styled.img`
 const IconAvatar = styled(Icon)`
   width: 65px;
   height: 65px;
-  transform: translateY(13px);
+  bottom: -15px;
   ${({ theme }) => theme.mediaQuery.md} {
     width: 80px;
     height: 80px;
-    transform: translateY(10px);
+    bottom: -25px;
   }
   ${({ theme }) => theme.mediaQuery.lg} {
-    transform: translateY(17px);
+    bottom: -15px;
   }
 `;
 const IconSex = styled(Icon)`
   width: 30px;
   height: 30px;
-  transform: translateY(6px);
-  ${Image} {
-    width: 60%;
-    border-radius: 0px;
-  }
+  bottom: -10px;
+
   ${({ theme }) => theme.mediaQuery.md} {
     width: 35px;
     height: 35px;
-    transform: translateY(0px);
+    bottom: -15px;
   }
   ${({ theme }) => theme.mediaQuery.lg} {
-    transform: translateY(6px);
+    bottom: -5px;
+  }
+
+  ${Image} {
+    width: 60%;
+    border-radius: 0px;
   }
 `;
 const Details = styled.div`
