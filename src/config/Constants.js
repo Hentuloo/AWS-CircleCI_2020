@@ -4,9 +4,13 @@ export const Constants = {
       buttonMoreInfoTitle: 'Więcej informacji',
       buttonMoreInfoAlt: 'Przycisk więcej informacji',
       findClient: 'Znajdź klienta...',
+      chooseNextOption: 'Wybierz następną opcję',
       sort: {
         alt: 'Sortowanie',
+        default: 'Nie sortuj',
         email: 'Sortuj według alfabetu (email)',
+        emailDesc: 'Sortuj alfabetycznie (od A do Z)',
+        emailAsc: 'Sortuj alfabetycznie (od Z do A)',
         age: 'Sortuj według wieku',
         descending: 'malejąco',
         ascending: 'rosnąco',

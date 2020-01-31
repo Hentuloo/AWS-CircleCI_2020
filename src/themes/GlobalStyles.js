@@ -13,7 +13,7 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 1.2rem;
-    color:  ${({ theme }) => theme.color.black[1]};  
+    color:  ${({ theme }) => theme.color.black[0]};  
 
     ${({ theme }) => theme.mediaQuery.md}{
          font-size: 1.4rem;

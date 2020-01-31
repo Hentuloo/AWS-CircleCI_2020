@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
 import Input from 'components/Input';
-import CustomCheckbox from 'components/CustomCheckbox';
+import CheckboxMultiOptions from 'components/CheckboxMultiOptions';
 
 import sortNumbers from 'assets/icons/sortNumbers.svg';
 import sortNumbersReserve from 'assets/icons/sortNumbersReserve.svg';
@@ -29,7 +29,7 @@ const TextInputFilter = styled(Input)`
   width: 80%;
   margin: 0px auto;
 `;
-const CheckboxTextWrapper = styled.div`
+const TextWithBadge = styled.div`
   display: flex;
   flex-direction: column;
   ${({ isActive }) =>
@@ -39,7 +39,7 @@ const CheckboxTextWrapper = styled.div`
       color: ${({ theme }) => theme.color.white[0]};
     `}
 `;
-const CheckboxWithIcon = styled.div`
+const TextWithIcon = styled.div`
   display: grid;
   height: 100%;
   grid-template-columns: auto 40px;
@@ -76,24 +76,42 @@ const FilterControlers = ({
         value={sortName}
       />
       <Title>{Constants.pl.STATEMENTS.sort.alt}</Title>
-      <CustomCheckbox
-        inputProps={{ name: 'sortEmail' }}
+      <CheckboxMultiOptions
+        options={[
+          { value: '0', name: Constants.pl.STATEMENTS.sort.default },
+          {
+            value: '1',
+            name: Constants.pl.STATEMENTS.sort.alfDesc,
+          },
+          { value: '2', name: Constants.pl.STATEMENTS.sort.alfAsc },
+        ]}
+        name="sortEmail"
+        defaultOption="0"
         onChange={onChangeFilter}
-        checked={sortEmail}
         title={Constants.pl.STATEMENTS.sort.email}
       >
-        <CheckboxTextWrapper isActive={sortEmail.toString() !== '0'}>
+        <TextWithBadge isActive={sortEmail.toString() !== '0'}>
           <span>{sortEmail === '2' ? 'CBA' : 'ABC'}</span>
           <SmallBadgeText>(email)</SmallBadgeText>
-        </CheckboxTextWrapper>
-      </CustomCheckbox>
-      <CustomCheckbox
-        inputProps={{ name: 'sortAge' }}
+        </TextWithBadge>
+      </CheckboxMultiOptions>
+      <CheckboxMultiOptions
+        options={[
+          { value: '0', name: Constants.pl.STATEMENTS.sort.default },
+          {
+            value: '1',
+            name: Constants.pl.STATEMENTS.sort.ascending,
+          },
+          {
+            value: '2',
+            name: Constants.pl.STATEMENTS.sort.descending,
+          },
+        ]}
+        name="sortAge"
         onChange={onChangeFilter}
-        checked={sortAge}
         title={Constants.pl.STATEMENTS.sort.age}
       >
-        <CheckboxWithIcon isActive={sortAge.toString() !== '0'}>
+        <TextWithIcon isActive={sortAge.toString() !== '0'}>
           <span>Wiek</span>
           {sortAge === '1' && (
             <Icon
@@ -107,8 +125,8 @@ const FilterControlers = ({
               alt={Constants.pl.STATEMENTS.sort.ascending}
             />
           )}
-        </CheckboxWithIcon>
-      </CustomCheckbox>
+        </TextWithIcon>
+      </CheckboxMultiOptions>
     </Filters>
   );
 };
