@@ -3,9 +3,9 @@
   "extends": [
     "eslint:recommended",
     "react-app",
-    "prettier",
     "airbnb",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "prettier"
   ],
   "globals": {
     "window": true,
@@ -33,6 +33,7 @@
   },
 
   "rules": {
+    "import/prefer-default-export": 0,
     "class-methods-use-this": 1,
     "react/display-name": 0,
     "react/jsx-props-no-spreading": 0,
