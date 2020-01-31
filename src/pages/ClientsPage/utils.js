@@ -2,7 +2,7 @@ import {
   isIncludeText,
   sortByAlphabet,
   sortByNumber,
-} from 'assets/config/utils';
+} from 'config/utils';
 
 export const filterClientsArray = (clientsArray, filterState) => {
   const { sortName, sortEmail, sortAge } = filterState;

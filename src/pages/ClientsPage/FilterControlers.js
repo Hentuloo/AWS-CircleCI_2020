@@ -8,6 +8,8 @@ import CustomCheckbox from 'components/CustomCheckbox';
 import sortNumbers from 'assets/icons/sortNumbers.svg';
 import sortNumbersReserve from 'assets/icons/sortNumbersReserve.svg';
 
+import { Constants } from 'config/Constants';
+
 const Filters = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -69,16 +71,16 @@ const FilterControlers = ({
       <TextInputFilter
         type="text"
         name="sortName"
-        placeholder="Znajdź klienta..."
+        placeholder={Constants.pl.STATEMENTS.findClient}
         onChange={onChangeFilter}
         value={sortName}
       />
-      <Title>Sortowanie</Title>
+      <Title>{Constants.pl.STATEMENTS.sort.alt}</Title>
       <CustomCheckbox
         inputProps={{ name: 'sortEmail' }}
         onChange={onChangeFilter}
         checked={sortEmail}
-        title="Sortuj według alfabetu (email)"
+        title={Constants.pl.STATEMENTS.sort.email}
       >
         <CheckboxTextWrapper isActive={sortEmail.toString() !== '0'}>
           <span>{sortEmail === '2' ? 'CBA' : 'ABC'}</span>
@@ -89,15 +91,21 @@ const FilterControlers = ({
         inputProps={{ name: 'sortAge' }}
         onChange={onChangeFilter}
         checked={sortAge}
-        title="Sortuj według alfabetu (email)"
+        title={Constants.pl.STATEMENTS.sort.age}
       >
         <CheckboxWithIcon isActive={sortAge.toString() !== '0'}>
           <span>Wiek</span>
           {sortAge === '1' && (
-            <Icon src={sortNumbers} alt="malejąco" />
+            <Icon
+              src={sortNumbers}
+              alt={Constants.pl.STATEMENTS.sort.descending}
+            />
           )}
           {sortAge === '2' && (
-            <Icon src={sortNumbersReserve} alt="rosnąco" />
+            <Icon
+              src={sortNumbersReserve}
+              alt={Constants.pl.STATEMENTS.sort.ascending}
+            />
           )}
         </CheckboxWithIcon>
       </CustomCheckbox>

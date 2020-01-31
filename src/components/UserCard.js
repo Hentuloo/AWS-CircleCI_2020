@@ -8,6 +8,7 @@ import femaleIcon from 'assets/icons/femaleIcon.svg';
 import maleIcon from 'assets/icons/maleIcon.svg';
 
 import Button from 'components/Button';
+import { Constants } from 'config/Constants';
 
 const Wrapper = styled.div`
   display: flex;
@@ -175,21 +176,31 @@ const UserCard = ({
       </ClientDetails>
       <Icons>
         <IconAvatar>
-          <Image src={avatar} alt="avatar" />
+          <Image
+            src={avatar}
+            alt={Constants.pl.STATEMENTS.icons.personIcon}
+          />
         </IconAvatar>
         {sex}
         <IconSex>
           <Image
             src={sex ? femaleIcon : maleIcon}
-            alt="płeć"
-            title={sex ? 'Kobieta' : 'Mężczyzna'}
+            alt={Constants.pl.STATEMENTS.sex.alt}
+            title={
+              sex
+                ? Constants.pl.STATEMENTS.sex.female
+                : Constants.pl.STATEMENTS.sex.male
+            }
           />
         </IconSex>
       </Icons>
     </HeaderBar>
     <Details>
       <Place>
-        <PlaceIcon src={placeIcon} alt="Miejsce zamieszkania" />
+        <PlaceIcon
+          src={placeIcon}
+          alt={Constants.pl.STATEMENTS.icons.place}
+        />
         <p>{city}</p>
         <p>{street}</p>
         <p>{houseNumber}</p>
@@ -197,10 +208,13 @@ const UserCard = ({
       <StyleButton
         type="button"
         disabled="disabled"
-        title="Więcej informacji"
+        title={Constants.pl.STATEMENTS.buttonMoreInfoTitle}
       >
         <span className="sr-only">Więcej informacji</span>
-        <img src={circlesIcon} alt="przycisk więcej informacji" />
+        <img
+          src={circlesIcon}
+          alt={Constants.pl.STATEMENTS.buttonMoreInfoAlt}
+        />
       </StyleButton>
     </Details>
   </Wrapper>
