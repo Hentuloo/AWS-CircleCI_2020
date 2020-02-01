@@ -2,6 +2,7 @@ import React, { useReducer, useMemo } from 'react';
 import styled from 'styled-components';
 
 import Clients from 'assets/clients.json';
+import { Constants } from 'config/Constants';
 import FilterControlers from './FilterControlers';
 
 import ClientsList from './ClientsList';
@@ -47,8 +48,8 @@ const App = () => {
     (state, newState) => ({ ...state, ...newState }),
     {
       sortName: '',
-      sortEmail: 0,
-      sortAge: 0,
+      sortEmail: Constants.sortTypes.default,
+      sortAge: Constants.sortTypes.default,
     },
   );
 

@@ -26,4 +26,15 @@ export const Constants = {
       },
     },
   },
+  sortTypes: {
+    default: 'NOT_SORT',
+    sortEmail: {
+      asc: 'SORT_EMAIL_ASC',
+      desc: 'SORT_EMAIL_DESC',
+    },
+    sortAge: {
+      asc: 'SORT_AGE_ASC',
+      desc: 'SORT_AGE_DESC',
+    },
+  },
 };

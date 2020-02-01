@@ -3,6 +3,7 @@ import {
   sortByAlphabet,
   sortByNumber,
 } from 'config/utils';
+import { Constants } from 'config/Constants';
 
 export const filterClientsArray = (clientsArray, filterState) => {
   const { sortName, sortEmail, sortAge } = filterState;
@@ -10,14 +11,14 @@ export const filterClientsArray = (clientsArray, filterState) => {
   let clients =
     clientsArray.length &&
     clientsArray.filter(({ name }) => isIncludeText(name, sortName));
-  if (sortEmail === '1') {
+  if (sortEmail === Constants.sortTypes.sortEmail.asc) {
     clients = sortByAlphabet(clients, 'email');
-  } else if (sortEmail === '2') {
+  } else if (sortEmail === Constants.sortTypes.sortEmail.desc) {
     clients = sortByAlphabet(clients, 'email', true);
   }
-  if (sortAge === '1') {
+  if (sortAge === Constants.sortTypes.sortAge.desc) {
     clients = sortByNumber(clients, 'age');
-  } else if (sortAge === '2') {
+  } else if (sortAge === Constants.sortTypes.sortAge.asc) {
     clients = sortByNumber(clients, 'age', true);
   }
   return clients;

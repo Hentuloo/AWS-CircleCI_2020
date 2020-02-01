@@ -78,48 +78,66 @@ const FilterControlers = ({
       <Title>{Constants.pl.STATEMENTS.sort.alt}</Title>
       <CheckboxMultiOptions
         options={[
-          { value: '0', name: Constants.pl.STATEMENTS.sort.default },
           {
-            value: '1',
+            value: Constants.sortTypes.default,
+            name: Constants.pl.STATEMENTS.sort.default,
+          },
+          {
+            value: Constants.sortTypes.sortEmail.desc,
             name: Constants.pl.STATEMENTS.sort.alfDesc,
           },
-          { value: '2', name: Constants.pl.STATEMENTS.sort.alfAsc },
+          {
+            value: Constants.sortTypes.sortEmail.asc,
+            name: Constants.pl.STATEMENTS.sort.alfAsc,
+          },
         ]}
         name="sortEmail"
-        defaultOption="0"
+        defaultOption={Constants.sortTypes.default}
         onChange={onChangeFilter}
         title={Constants.pl.STATEMENTS.sort.email}
       >
-        <TextWithBadge isActive={sortEmail.toString() !== '0'}>
-          <span>{sortEmail === '2' ? 'CBA' : 'ABC'}</span>
+        <TextWithBadge
+          isActive={sortEmail !== Constants.sortTypes.default}
+        >
+          <span>
+            {sortEmail === Constants.sortTypes.sortEmail.asc
+              ? 'CBA'
+              : 'ABC'}
+          </span>
           <SmallBadgeText>(email)</SmallBadgeText>
         </TextWithBadge>
       </CheckboxMultiOptions>
       <CheckboxMultiOptions
         options={[
-          { value: '0', name: Constants.pl.STATEMENTS.sort.default },
           {
-            value: '1',
+            value: Constants.sortTypes.default,
+            name: Constants.pl.STATEMENTS.sort.default,
+          },
+          {
+            value: Constants.sortTypes.sortAge.desc,
             name: Constants.pl.STATEMENTS.sort.ascending,
           },
           {
-            value: '2',
+            value: Constants.sortTypes.sortAge.asc,
             name: Constants.pl.STATEMENTS.sort.descending,
           },
         ]}
         name="sortAge"
+        defaultOption={Constants.sortTypes.default}
         onChange={onChangeFilter}
         title={Constants.pl.STATEMENTS.sort.age}
       >
-        <TextWithIcon isActive={sortAge.toString() !== '0'}>
+        <TextWithIcon
+          isActive={sortAge !== Constants.sortTypes.default}
+        >
           <span>Wiek</span>
-          {sortAge === '1' && (
+          {sortAge === Constants.sortTypes.sortAge.desc && (
             <Icon
               src={sortNumbers}
               alt={Constants.pl.STATEMENTS.sort.descending}
             />
           )}
-          {sortAge === '2' && (
+          {sortAge === Constants.sortTypes.sortAge.asc && (
             <Icon
               src={sortNumbersReserve}
               alt={Constants.pl.STATEMENTS.sort.ascending}
