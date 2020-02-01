@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "address": {
+        "city": "Warsaw",
+        "street": "Miodowa",
+        "houseNumber": "18"
+      },
+      "_id": "5e2ff7e09b56431b7865ef2d",
+      "name": "Lewandowski Andrue",
+      "email": "andrueLew@o2.pl",
+      "sex": false,
+      "avatar": "https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_960_720.png",
+      "age": 22,
+      "__v": 0
+    },
+    {
+      "address": {
+        "city": "Gerenada",
+        "street": "call de christo",
+        "houseNumber": "23A"
+      },
+      "_id": "5e2ff81a9b56431b7865ef2e",
+      "name": "Julian Ochota",
+      "email": "julian@fmail.com",
+      "sex": true,
+      "avatar": "https://cdn4.iconfinder.com/data/icons/professional-avatar-5/48/Public_relation_avatar_women_woman_profile_character_professions_2-512.png",
+      "age": 33,
+      "__v": 0
+    }
+  ]
+}

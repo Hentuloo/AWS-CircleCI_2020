@@ -133,14 +133,14 @@ const FilterControlers = ({
           <span>Wiek</span>
           {sortAge === Constants.sortTypes.sortAge.desc && (
             <Icon
-              src={sortNumbers}
-              alt={Constants.pl.STATEMENTS.sort.descending}
+              src={sortNumbersReserve}
+              alt={Constants.pl.STATEMENTS.sort.ascending}
             />
           )}
           {sortAge === Constants.sortTypes.sortAge.asc && (
             <Icon
-              src={sortNumbersReserve}
-              alt={Constants.pl.STATEMENTS.sort.ascending}
+              src={sortNumbers}
+              alt={Constants.pl.STATEMENTS.sort.descending}
             />
           )}
         </TextWithIcon>
@@ -166,8 +166,8 @@ FilterControlers.propTypes = {
 FilterControlers.defaultProps = {
   filtersState: {
     sortName: '',
-    sortEmail: '0',
-    sortAge: '0',
+    sortEmail: '',
+    sortAge: '',
   },
 };
 

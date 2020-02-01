@@ -164,7 +164,11 @@ const UserCard = ({
   as,
   className,
 }) => (
-  <Wrapper className={className} as={as}>
+  <Wrapper
+    data-testid="user-card-component"
+    className={className}
+    as={as}
+  >
     <HeaderBar>
       <ClientDetails>
         <Name>{name}</Name>

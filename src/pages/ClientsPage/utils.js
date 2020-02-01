@@ -17,9 +17,9 @@ export const filterClientsArray = (clientsArray, filterState) => {
     clients = sortByAlphabet(clients, 'email', true);
   }
   if (sortAge === Constants.sortTypes.sortAge.desc) {
-    clients = sortByNumber(clients, 'age');
-  } else if (sortAge === Constants.sortTypes.sortAge.asc) {
     clients = sortByNumber(clients, 'age', true);
+  } else if (sortAge === Constants.sortTypes.sortAge.asc) {
+    clients = sortByNumber(clients, 'age');
   }
   return clients;
 };

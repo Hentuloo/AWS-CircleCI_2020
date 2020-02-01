@@ -44,7 +44,6 @@ const Clients = ({ data }) => {
             />
           ),
         )}
-        {' '}
       </ClientsWrapper>
     );
   }
