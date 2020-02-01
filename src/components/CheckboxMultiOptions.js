@@ -63,6 +63,7 @@ const CheckboxMultiOptions = ({
       <Wrapper className={className} title={title}>
         {title && <p className="sr-only">{title}</p>}
         <select
+          data-testid="select-element"
           ref={selectRef}
           name={name}
           className="sr-only"
@@ -76,6 +77,7 @@ const CheckboxMultiOptions = ({
           ))}
         </select>
         <Button
+          data-testid="button-element"
           type="button"
           value={activeOption}
           onClick={changeOption}
