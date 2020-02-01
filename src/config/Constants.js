@@ -7,6 +7,7 @@ export const Constants = {
       chooseNextOption: 'Wybierz następną opcję',
       sort: {
         alt: 'Sortowanie',
+        empty: 'Brak wyników...',
         default: 'Nie sortuj',
         email: 'Sortuj według alfabetu (email)',
         alfDesc: 'od A do Z',

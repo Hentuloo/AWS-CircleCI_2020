@@ -114,4 +114,35 @@ describe('Page with clients list and filters controlers', () => {
     // check users card order
     expect(clientsCards.length).toBe(1);
   });
+
+  test('should display statement when clientsArray is empty', () => {
+    const {
+      queryByPlaceholderText,
+      queryAllByTestId,
+      getByText,
+    } = setup();
+
+    const inputNode = queryByPlaceholderText(
+      Constants.pl.STATEMENTS.findClient,
+    );
+    let clientsCards = queryAllByTestId('user-card-component');
+
+    expect(clientsCards.length).toBe(2);
+
+    fireEvent.change(inputNode, {
+      target: { value: 'blah blah blah' },
+    });
+
+    // check select element
+    expect(inputNode).toHaveValue('blah blah blah');
+
+    // update order of clientsCards
+    clientsCards = queryAllByTestId('user-card-component');
+    // check users card order
+    expect(clientsCards.length).toBe(0);
+
+    expect(
+      getByText(Constants.pl.STATEMENTS.sort.empty),
+    ).toBeInTheDocument();
+  });
 });
