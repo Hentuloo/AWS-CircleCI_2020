@@ -17,12 +17,11 @@ const StyledUserCard = styled(UserCard)`
 const ErrorStatements = styled.p`
   display: block;
   margin: 20px auto;
-  font-size ${({ theme }) => theme.fs.s};
+  font-size: ${({ theme }) => theme.fs.s};
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  color:  ${({ theme }) => theme.color.blue[1]};
-
+  color: ${({ theme }) => theme.color.blue[1]};
 `;
 
 const Clients = ({ data }) => {

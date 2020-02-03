@@ -5,6 +5,8 @@ import mockClients from '__mocks__/mockyClients.json';
 import { fireEvent } from '@testing-library/react';
 import { Constants } from 'config/Constants';
 
+const elementWithActiveSortText = 'onActive-text';
+
 jest.mock('assets/clients.json', () =>
   // eslint-disable-next-line global-require
   require('__mocks__/mockyClients.json'),
@@ -25,9 +27,12 @@ describe('Page with clients list and filters controlers', () => {
   });
 
   test('should sort clients by email', () => {
-    const { queryAllByTestId } = setup();
+    const { queryAllByTestId, queryByTitle } = setup();
 
-    const selectForEmailSort = queryAllByTestId('select-element')[0];
+    const buttonEmailDesc = queryByTitle(
+      Constants.pl.STATEMENTS.sort.alfDesc,
+    );
+    const activeText = queryAllByTestId(elementWithActiveSortText)[0];
     let clientsCards = queryAllByTestId('user-card-component');
 
     expect(clientsCards[0]).toHaveTextContent(
@@ -38,13 +43,10 @@ describe('Page with clients list and filters controlers', () => {
       mockClients.data[1].name,
     );
 
-    fireEvent.change(selectForEmailSort, {
-      target: { value: Constants.sortTypes.sortEmail.asc },
-    });
+    fireEvent.click(buttonEmailDesc);
 
-    // check select element
-    expect(selectForEmailSort).toHaveValue(
-      Constants.sortTypes.sortEmail.asc,
+    expect(activeText).toHaveTextContent(
+      Constants.pl.STATEMENTS.sort.email.textDesc,
     );
 
     // update order of clientsCards
@@ -59,9 +61,12 @@ describe('Page with clients list and filters controlers', () => {
   });
 
   test('should sort clients by age', () => {
-    const { queryAllByTestId } = setup();
+    const { queryAllByTestId, queryByTitle } = setup();
 
-    const selectForAgeSort = queryAllByTestId('select-element')[1];
+    const activeText = queryAllByTestId(elementWithActiveSortText)[1];
+    const buttonAgeDesc = queryByTitle(
+      Constants.pl.STATEMENTS.sort.descending,
+    );
     let clientsCards = queryAllByTestId('user-card-component');
 
     expect(clientsCards[0]).toHaveTextContent(
@@ -72,13 +77,10 @@ describe('Page with clients list and filters controlers', () => {
       mockClients.data[1].age,
     );
 
-    fireEvent.change(selectForAgeSort, {
-      target: { value: Constants.sortTypes.sortAge.desc },
-    });
+    fireEvent.click(buttonAgeDesc);
 
-    // check select element
-    expect(selectForAgeSort).toHaveValue(
-      Constants.sortTypes.sortAge.desc,
+    expect(activeText).toHaveTextContent(
+      Constants.pl.STATEMENTS.sort.age.textDesc,
     );
 
     // update order of clientsCards

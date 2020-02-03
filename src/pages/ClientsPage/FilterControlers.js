@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import Input from 'components/Input';
-import CheckboxMultiOptions from 'components/CheckboxMultiOptions';
+import ButtonsGroup from 'components/ButtonsGroup/ButtonsGroup';
 
-import sortNumbers from 'assets/icons/sortNumbers.svg';
-import sortNumbersReserve from 'assets/icons/sortNumbersReserve.svg';
+import iconSortNumbersDESC from 'assets/icons/sort/sortNumbersDESC.svg';
+import iconSortNumbersASC from 'assets/icons/sort/sortNumbersASC.svg';
+import iconSortStringASC from 'assets/icons/sort/sortStringASC.svg';
+import iconSortStringDESC from 'assets/icons/sort/sortStringDESC.svg';
+import closeSortIcon from 'assets/icons/sort/closeSort.svg';
 
 import { Constants } from 'config/Constants';
 
@@ -29,41 +32,9 @@ const TextInputFilter = styled(Input)`
   width: 80%;
   margin: 0px auto;
 `;
-const TextWithBadge = styled.div`
-  display: flex;
-  flex-direction: column;
-  ${({ isActive }) =>
-    isActive &&
-    css`
-      background-color: ${({ theme }) => theme.color.blue[0]};
-      color: ${({ theme }) => theme.color.white[0]};
-    `}
-`;
-const TextWithIcon = styled.div`
-  display: grid;
-  height: 100%;
-  grid-template-columns: auto 40px;
-  padding: 0px 15px;
-  align-items: center;
-  ${({ isActive }) =>
-    isActive &&
-    css`
-      background-color: ${({ theme }) => theme.color.blue[0]};
-      color: ${({ theme }) => theme.color.white[0]};
-    `}
-`;
-const SmallBadgeText = styled.small`
-  font-size: ${({ theme }) => theme.fs.mini};
-  letter-spacing: 0px;
-  font-weight: lighter;
-`;
-const Icon = styled.img`
-  display: block;
-  height: 39px;
-`;
 
 const FilterControlers = ({
-  filtersState: { sortName, sortEmail, sortAge },
+  filtersState: { sortName },
   onChangeFilter,
 }) => {
   return (
@@ -76,75 +47,56 @@ const FilterControlers = ({
         value={sortName}
       />
       <Title>{Constants.pl.STATEMENTS.sort.alt}</Title>
-      <CheckboxMultiOptions
-        options={[
+      <ButtonsGroup
+        name="sortEmail"
+        onChange={onChangeFilter}
+        title={Constants.pl.STATEMENTS.sort.email.title}
+        buttons={[
           {
             value: Constants.sortTypes.default,
-            name: Constants.pl.STATEMENTS.sort.default,
-          },
-          {
-            value: Constants.sortTypes.sortEmail.desc,
-            name: Constants.pl.STATEMENTS.sort.alfDesc,
+            title: Constants.pl.STATEMENTS.sort.notSort,
+            onActive: Constants.pl.STATEMENTS.sort.email.defaultText,
+            icon: closeSortIcon,
           },
           {
             value: Constants.sortTypes.sortEmail.asc,
-            name: Constants.pl.STATEMENTS.sort.alfAsc,
+            title: Constants.pl.STATEMENTS.sort.alfAsc,
+            onActive: Constants.pl.STATEMENTS.sort.email.textAsc,
+            icon: iconSortStringASC,
+          },
+          {
+            value: Constants.sortTypes.sortEmail.desc,
+            title: Constants.pl.STATEMENTS.sort.alfDesc,
+            onActive: Constants.pl.STATEMENTS.sort.email.textDesc,
+            icon: iconSortStringDESC,
           },
         ]}
-        name="sortEmail"
-        defaultOption={Constants.sortTypes.default}
+      />
+      <ButtonsGroup
+        name="sortAge"
         onChange={onChangeFilter}
-        title={Constants.pl.STATEMENTS.sort.email}
-      >
-        <TextWithBadge
-          isActive={sortEmail !== Constants.sortTypes.default}
-        >
-          <span>
-            {sortEmail === Constants.sortTypes.sortEmail.asc
-              ? 'CBA'
-              : 'ABC'}
-          </span>
-          <SmallBadgeText>(email)</SmallBadgeText>
-        </TextWithBadge>
-      </CheckboxMultiOptions>
-      <CheckboxMultiOptions
-        options={[
+        title={Constants.pl.STATEMENTS.sort.age.title}
+        buttons={[
           {
             value: Constants.sortTypes.default,
-            name: Constants.pl.STATEMENTS.sort.default,
-          },
-          {
-            value: Constants.sortTypes.sortAge.desc,
-            name: Constants.pl.STATEMENTS.sort.ascending,
+            title: Constants.pl.STATEMENTS.sort.notSort,
+            onActive: Constants.pl.STATEMENTS.sort.age.defaultText,
+            icon: closeSortIcon,
           },
           {
             value: Constants.sortTypes.sortAge.asc,
-            name: Constants.pl.STATEMENTS.sort.descending,
+            title: Constants.pl.STATEMENTS.sort.ascending,
+            onActive: Constants.pl.STATEMENTS.sort.age.textAsc,
+            icon: iconSortNumbersASC,
+          },
+          {
+            value: Constants.sortTypes.sortAge.desc,
+            title: Constants.pl.STATEMENTS.sort.descending,
+            onActive: Constants.pl.STATEMENTS.sort.age.textDesc,
+            icon: iconSortNumbersDESC,
           },
         ]}
-        name="sortAge"
-        defaultOption={Constants.sortTypes.default}
-        onChange={onChangeFilter}
-        title={Constants.pl.STATEMENTS.sort.age}
-      >
-        <TextWithIcon
-          isActive={sortAge !== Constants.sortTypes.default}
-        >
-          <span>Wiek</span>
-          {sortAge === Constants.sortTypes.sortAge.desc && (
-            <Icon
-              src={sortNumbersReserve}
-              alt={Constants.pl.STATEMENTS.sort.ascending}
-            />
-          )}
-          {sortAge === Constants.sortTypes.sortAge.asc && (
-            <Icon
-              src={sortNumbers}
-              alt={Constants.pl.STATEMENTS.sort.descending}
-            />
-          )}
-        </TextWithIcon>
-      </CheckboxMultiOptions>
+      />
     </Filters>
   );
 };
