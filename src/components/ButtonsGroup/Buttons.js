@@ -30,7 +30,7 @@ export const ButtonsWrapper = styled.div`
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s 0.15s linear;
-  ${({ length }) => {
+  ${({ length, theme }) => {
     switch (length) {
       case 1:
         return css`
@@ -56,14 +56,29 @@ export const ButtonsWrapper = styled.div`
             left: 50%;
             top: -1%;
           }
+          ${theme.mediaQuery.md} {
+            ${Button}:nth-of-type(1) {
+              top: -4%;
+            }
+          }
           ${Button}:nth-of-type(2) {
             left: 22%;
             bottom: 4%;
+          }
+          ${theme.mediaQuery.md} {
+            ${Button}:nth-of-type(2) {
+              left: 20%;
+            }
           }
           ${Button}:nth-of-type(3) {
             right: 22%;
             bottom: 4%;
             transform: translate(50%, 0%);
+          }
+          ${theme.mediaQuery.md} {
+            ${Button}:nth-of-type(3) {
+              right: 22%;
+            }
           }
         `;
       case 4:

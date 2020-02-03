@@ -9,14 +9,25 @@ const Wrapper = styled.div`
   height: 130px;
   border-radius: 50%;
   margin: -10px auto;
+  ${({ theme }) => theme.mediaQuery.md} {
+    margin: 5px auto;
+    width: 140px;
+    height: 140px;
+  }
   &:hover,
   &:active,
   &:focus {
     &::before {
       transform: scale(1.1);
+      ${({ theme }) => theme.mediaQuery.md} {
+        transform: scale(1.2);
+      }
     }
     &::after {
       transform: scale(0.46);
+      ${({ theme }) => theme.mediaQuery.md} {
+        transform: scale(0.5);
+      }
     }
     ${ButtonsWrapper} {
       pointer-events: auto;

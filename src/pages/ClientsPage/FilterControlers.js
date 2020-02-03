@@ -31,6 +31,8 @@ const TextInputFilter = styled(Input)`
   grid-column: 1/-1;
   width: 80%;
   margin: 0px auto;
+  padding: 10px 5px 10px 15px;
+  font-size: ${({ theme }) => theme.fs.s};
 `;
 
 const FilterControlers = ({
