@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page with clients list and filters controlers mocked clients snapshot 1`] = `
+Array [
+  <div
+    class="sc-fzXfLP joErSm sc-fzXfMC ePjrrI"
+    data-testid="user-card-component"
+  >
+    <div
+      class="sc-fzXfLQ kOoPVq"
+    >
+      <div
+        class="sc-fzXfLR jHcdUY"
+      >
+        <p
+          class="sc-fzXfLS cvRBWe"
+        >
+          Lewandowski Andrue
+        </p>
+        <small
+          class="sc-fzXfLT jFyZmF"
+        >
+          22
+          lat
+        </small>
+        <span
+          class="sc-fzXfLU fRBvOQ"
+        >
+          andrueLew@o2.pl
+        </span>
+      </div>
+      <div
+        class="sc-fzXfLV bdnQth"
+      >
+        <div
+          class="sc-fzXfLW sc-fzXfMv bhednH"
+        >
+          <img
+            alt="avatar"
+            class="sc-fzXfLX eSUZVR"
+            src="https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_960_720.png"
+          />
+        </div>
+        <div
+          class="sc-fzXfLW sc-fzXfMw fwnIKr"
+        >
+          <img
+            alt="Płeć"
+            class="sc-fzXfLX eSUZVR"
+            src="maleIcon.svg"
+            title="Mężczyzna"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-fzXfMx fOCSDN"
+    >
+      <div
+        class="sc-fzXfMy bZutzM"
+      >
+        <img
+          alt="Miejsce zamieszkania"
+          class="sc-fzXfMz kkJXQX"
+          src="placeIcon.svg"
+        />
+        <p>
+          Warsaw
+        </p>
+        <p>
+          Miodowa
+        </p>
+        <p>
+          18
+        </p>
+      </div>
+      <button
+        class="sc-fzXfLO sc-fzXfMA jsOZdh"
+        disabled=""
+        title="Więcej informacji"
+        type="button"
+      >
+        <span
+          class="sr-only"
+        >
+          Więcej informacji
+        </span>
+        <img
+          alt="Przycisk więcej informacji"
+          src="circles.svg"
+        />
+      </button>
+    </div>
+  </div>,
+  <div
+    class="sc-fzXfLP joErSm sc-fzXfMC ePjrrI"
+    data-testid="user-card-component"
+  >
+    <div
+      class="sc-fzXfLQ kOoPVq"
+    >
+      <div
+        class="sc-fzXfLR jHcdUY"
+      >
+        <p
+          class="sc-fzXfLS cvRBWe"
+        >
+          Julian Ochota
+        </p>
+        <small
+          class="sc-fzXfLT jFyZmF"
+        >
+          33
+          lat
+        </small>
+        <span
+          class="sc-fzXfLU fRBvOQ"
+        >
+          julian@fmail.com
+        </span>
+      </div>
+      <div
+        class="sc-fzXfLV bdnQth"
+      >
+        <div
+          class="sc-fzXfLW sc-fzXfMv bhednH"
+        >
+          <img
+            alt="avatar"
+            class="sc-fzXfLX eSUZVR"
+            src="https://cdn4.iconfinder.com/data/icons/professional-avatar-5/48/Public_relation_avatar_women_woman_profile_character_professions_2-512.png"
+          />
+        </div>
+        <div
+          class="sc-fzXfLW sc-fzXfMw fwnIKr"
+        >
+          <img
+            alt="Płeć"
+            class="sc-fzXfLX eSUZVR"
+            src="femaleIcon.svg"
+            title="Kobieta"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-fzXfMx fOCSDN"
+    >
+      <div
+        class="sc-fzXfMy bZutzM"
+      >
+        <img
+          alt="Miejsce zamieszkania"
+          class="sc-fzXfMz kkJXQX"
+          src="placeIcon.svg"
+        />
+        <p>
+          Gerenada
+        </p>
+        <p>
+          call de christo
+        </p>
+        <p>
+          23A
+        </p>
+      </div>
+      <button
+        class="sc-fzXfLO sc-fzXfMA jsOZdh"
+        disabled=""
+        title="Więcej informacji"
+        type="button"
+      >
+        <span
+          class="sr-only"
+        >
+          Więcej informacji
+        </span>
+        <img
+          alt="Przycisk więcej informacji"
+          src="circles.svg"
+        />
+      </button>
+    </div>
+  </div>,
+]
+`;

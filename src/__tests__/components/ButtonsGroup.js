@@ -43,6 +43,11 @@ const setup = (props = defaultProps) => {
 };
 
 describe('ButtonsGroup component', () => {
+  test('mocked buttons snapshot', () => {
+    const { container } = setup();
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
   test('should display title prop', () => {
     const { getByText } = setup();
 

@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonsGroup component mocked buttons snapshot 1`] = `
+<div>
+  <div
+    class="sc-AykKF fuJTRO"
+  >
+    <p
+      class="sr-only"
+    >
+      nice checkbox blah
+    </p>
+    <div
+      class="sc-AykKG fRUjnM"
+      data-testid="onActive-text"
+    >
+      my text from default button
+    </div>
+    <div
+      class="sc-AykKE ilvNqw"
+    >
+      <button
+        class="sc-AykKC jQIKqH"
+        title="some first value"
+        type="button"
+      >
+        <span
+          class="sr-only"
+        >
+          some first value
+        </span>
+        <img
+          alt="some first value"
+          class="sc-AykKD cnMsrC"
+          src="nice icon"
+        />
+      </button>
+      <button
+        class="sc-AykKC jQIKqH"
+        title="add some sorter"
+        type="button"
+      >
+        <span
+          class="sr-only"
+        >
+          add some sorter
+        </span>
+        <img
+          alt="add some sorter"
+          class="sc-AykKD cnMsrC"
+          src="nice icon2"
+        />
+      </button>
+      <button
+        class="sc-AykKC jQIKqH"
+        title="add some other sorter"
+        type="button"
+      >
+        <span
+          class="sr-only"
+        >
+          add some other sorter
+        </span>
+        <img
+          alt="add some other sorter"
+          class="sc-AykKD cnMsrC"
+          src="nice icon3"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;

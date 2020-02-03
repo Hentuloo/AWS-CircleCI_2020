@@ -26,6 +26,12 @@ describe('Page with clients list and filters controlers', () => {
     expect(firstClientCard).toBeInTheDocument();
   });
 
+  test('mocked clients snapshot', () => {
+    const { queryAllByTestId } = setup();
+    const clientsCards = queryAllByTestId('user-card-component');
+    expect(clientsCards).toMatchSnapshot();
+  });
+
   test('should sort clients by email', () => {
     const { queryAllByTestId, queryByTitle } = setup();
 
