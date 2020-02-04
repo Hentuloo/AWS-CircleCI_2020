@@ -4,6 +4,7 @@ import ClientsPage from 'pages/ClientsPage/ClientsPage';
 import mockClients from '__mocks__/mockyClients.json';
 import { fireEvent } from '@testing-library/react';
 import { Constants } from 'config/Constants';
+import 'jest-styled-components';
 
 const elementWithActiveSortText = 'onActive-text';
 

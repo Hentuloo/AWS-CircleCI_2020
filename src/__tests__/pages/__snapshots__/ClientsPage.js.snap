@@ -2,51 +2,324 @@
 
 exports[`Page with clients list and filters controlers mocked clients snapshot 1`] = `
 Array [
-  <div
-    class="sc-fzXfLP joErSm sc-fzXfMC ePjrrI"
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 95%;
+  max-width: 450px;
+  margin: 0px auto;
+  border-radius: 16px;
+  box-shadow: 6px 6px 8px rgba(0,0,0,0.25);
+}
+
+.c2 {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  width: 100%;
+  min-height: 70px;
+  padding: 5px 8px;
+  border-radius: 16px 16px 0px 0px;
+  background-color: rgb(166,229,238);
+  margin-bottom: 15px;
+}
+
+.c3 {
+  padding: 5px 0px;
+}
+
+.c4 {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-right: 5px;
+}
+
+.c5 {
+  font-weight: bold;
+  font-size: 1.0em;
+  color: rgb(148,148,148);
+}
+
+.c6 {
+  display: block;
+  font-size: 1.2em;
+  color: rgb(119,119,119);
+  word-break: break-all;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c10 {
+  position: absolute;
+  width: 130%;
+  max-height: 130%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+}
+
+.c8 {
+  position: relative;
+  border-radius: 50%;
+  background-color: rgb(255,255,255);
+  border: 3px solid rgb(166,229,238);
+  overflow: hidden;
+  margin: 0px 5px 0px 0px;
+  width: 65px;
+  height: 65px;
+  bottom: -15px;
+}
+
+.c11 {
+  position: relative;
+  border-radius: 50%;
+  background-color: rgb(255,255,255);
+  border: 3px solid rgb(166,229,238);
+  overflow: hidden;
+  margin: 0px 5px 0px 0px;
+  width: 30px;
+  height: 30px;
+  bottom: -10px;
+}
+
+.c11 .c9 {
+  width: 60%;
+  border-radius: 0px;
+}
+
+.c12 {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  min-height: 55px;
+  padding-bottom: 10px;
+}
+
+.c13 {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: 45px 1fr;
+  grid-template-rows: repeat(3,auto);
+  padding-left: 15px;
+}
+
+.c13 p {
+  font-weight: bold;
+}
+
+.c14 {
+  grid-row: 1/-1;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.c15 {
+  font-size: 1.65em;
+  background-color: rgb(166,229,238);
+  border: none;
+  color: rgb(255,255,255);
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  width: 50px;
+  height: 25px;
+  margin: 0px 10px 0px 0px;
+}
+
+.c15:hover {
+  background-color: rgb(70,147,158);
+}
+
+.c15 img {
+  max-width: 90%;
+  -webkit-transform: translateY(-25%);
+  -ms-transform: translateY(-25%);
+  transform: translateY(-25%);
+}
+
+.c1 {
+  margin: 25px auto;
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1024px) {
+  .c2 {
+    margin-bottom: 20px;
+    height: 80px;
+  }
+}
+
+@media (min-width:768px) {
+  .c6 {
+    padding-top: 4px;
+  }
+}
+
+@media (min-width:768px) {
+  .c10 {
+    max-width: 120%;
+    max-height: 100%;
+  }
+}
+
+@media (min-width:768px) {
+  .c8 {
+    border: 4px solid rgb(166,229,238);
+  }
+}
+
+@media (min-width:768px) {
+  .c8 {
+    width: 80px;
+    height: 80px;
+    bottom: -25px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    bottom: -15px;
+  }
+}
+
+@media (min-width:768px) {
+  .c11 {
+    border: 4px solid rgb(166,229,238);
+  }
+}
+
+@media (min-width:768px) {
+  .c11 {
+    width: 35px;
+    height: 35px;
+    bottom: -15px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c11 {
+    bottom: -5px;
+  }
+}
+
+@media (min-width:768px) {
+  .c15 img {
+    -webkit-transform: translateY(-45%);
+    -ms-transform: translateY(-45%);
+    transform: translateY(-45%);
+  }
+}
+
+@media (min-width:1024px) {
+
+}
+
+@media (min-width:1024px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+<div
+    class="c0 c1"
     data-testid="user-card-component"
   >
     <div
-      class="sc-fzXfLQ kOoPVq"
+      class="c2"
     >
       <div
-        class="sc-fzXfLR jHcdUY"
+        class="c3"
       >
         <p
-          class="sc-fzXfLS cvRBWe"
+          class="c4"
         >
           Lewandowski Andrue
         </p>
         <small
-          class="sc-fzXfLT jFyZmF"
+          class="c5"
         >
           22
           lat
         </small>
         <span
-          class="sc-fzXfLU fRBvOQ"
+          class="c6"
         >
           andrueLew@o2.pl
         </span>
       </div>
       <div
-        class="sc-fzXfLV bdnQth"
+        class="c7"
       >
         <div
-          class="sc-fzXfLW sc-fzXfMv bhednH"
+          class="sc-fzXfLW c8"
         >
           <img
             alt="avatar"
-            class="sc-fzXfLX eSUZVR"
+            class="c9 c10"
             src="https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_960_720.png"
           />
         </div>
         <div
-          class="sc-fzXfLW sc-fzXfMw fwnIKr"
+          class="sc-fzXfLW c11"
         >
           <img
             alt="Płeć"
-            class="sc-fzXfLX eSUZVR"
+            class="c9 c10"
             src="maleIcon.svg"
             title="Mężczyzna"
           />
@@ -54,14 +327,14 @@ Array [
       </div>
     </div>
     <div
-      class="sc-fzXfMx fOCSDN"
+      class="c12"
     >
       <div
-        class="sc-fzXfMy bZutzM"
+        class="c13"
       >
         <img
           alt="Miejsce zamieszkania"
-          class="sc-fzXfMz kkJXQX"
+          class="c14"
           src="placeIcon.svg"
         />
         <p>
@@ -75,7 +348,7 @@ Array [
         </p>
       </div>
       <button
-        class="sc-fzXfLO sc-fzXfMA jsOZdh"
+        class="sc-fzXfLO c15"
         disabled=""
         title="Więcej informacji"
         type="button"
@@ -92,51 +365,324 @@ Array [
       </button>
     </div>
   </div>,
-  <div
-    class="sc-fzXfLP joErSm sc-fzXfMC ePjrrI"
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 95%;
+  max-width: 450px;
+  margin: 0px auto;
+  border-radius: 16px;
+  box-shadow: 6px 6px 8px rgba(0,0,0,0.25);
+}
+
+.c2 {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  width: 100%;
+  min-height: 70px;
+  padding: 5px 8px;
+  border-radius: 16px 16px 0px 0px;
+  background-color: rgb(166,229,238);
+  margin-bottom: 15px;
+}
+
+.c3 {
+  padding: 5px 0px;
+}
+
+.c4 {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-right: 5px;
+}
+
+.c5 {
+  font-weight: bold;
+  font-size: 1.0em;
+  color: rgb(148,148,148);
+}
+
+.c6 {
+  display: block;
+  font-size: 1.2em;
+  color: rgb(119,119,119);
+  word-break: break-all;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c10 {
+  position: absolute;
+  width: 130%;
+  max-height: 130%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+}
+
+.c8 {
+  position: relative;
+  border-radius: 50%;
+  background-color: rgb(255,255,255);
+  border: 3px solid rgb(166,229,238);
+  overflow: hidden;
+  margin: 0px 5px 0px 0px;
+  width: 65px;
+  height: 65px;
+  bottom: -15px;
+}
+
+.c11 {
+  position: relative;
+  border-radius: 50%;
+  background-color: rgb(255,255,255);
+  border: 3px solid rgb(166,229,238);
+  overflow: hidden;
+  margin: 0px 5px 0px 0px;
+  width: 30px;
+  height: 30px;
+  bottom: -10px;
+}
+
+.c11 .c9 {
+  width: 60%;
+  border-radius: 0px;
+}
+
+.c12 {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  min-height: 55px;
+  padding-bottom: 10px;
+}
+
+.c13 {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: 45px 1fr;
+  grid-template-rows: repeat(3,auto);
+  padding-left: 15px;
+}
+
+.c13 p {
+  font-weight: bold;
+}
+
+.c14 {
+  grid-row: 1/-1;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.c15 {
+  font-size: 1.65em;
+  background-color: rgb(166,229,238);
+  border: none;
+  color: rgb(255,255,255);
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  width: 50px;
+  height: 25px;
+  margin: 0px 10px 0px 0px;
+}
+
+.c15:hover {
+  background-color: rgb(70,147,158);
+}
+
+.c15 img {
+  max-width: 90%;
+  -webkit-transform: translateY(-25%);
+  -ms-transform: translateY(-25%);
+  transform: translateY(-25%);
+}
+
+.c1 {
+  margin: 25px auto;
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1024px) {
+  .c2 {
+    margin-bottom: 20px;
+    height: 80px;
+  }
+}
+
+@media (min-width:768px) {
+  .c6 {
+    padding-top: 4px;
+  }
+}
+
+@media (min-width:768px) {
+  .c10 {
+    max-width: 120%;
+    max-height: 100%;
+  }
+}
+
+@media (min-width:768px) {
+  .c8 {
+    border: 4px solid rgb(166,229,238);
+  }
+}
+
+@media (min-width:768px) {
+  .c8 {
+    width: 80px;
+    height: 80px;
+    bottom: -25px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    bottom: -15px;
+  }
+}
+
+@media (min-width:768px) {
+  .c11 {
+    border: 4px solid rgb(166,229,238);
+  }
+}
+
+@media (min-width:768px) {
+  .c11 {
+    width: 35px;
+    height: 35px;
+    bottom: -15px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c11 {
+    bottom: -5px;
+  }
+}
+
+@media (min-width:768px) {
+  .c15 img {
+    -webkit-transform: translateY(-45%);
+    -ms-transform: translateY(-45%);
+    transform: translateY(-45%);
+  }
+}
+
+@media (min-width:1024px) {
+
+}
+
+@media (min-width:1024px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+<div
+    class="c0 c1"
     data-testid="user-card-component"
   >
     <div
-      class="sc-fzXfLQ kOoPVq"
+      class="c2"
     >
       <div
-        class="sc-fzXfLR jHcdUY"
+        class="c3"
       >
         <p
-          class="sc-fzXfLS cvRBWe"
+          class="c4"
         >
           Julian Ochota
         </p>
         <small
-          class="sc-fzXfLT jFyZmF"
+          class="c5"
         >
           33
           lat
         </small>
         <span
-          class="sc-fzXfLU fRBvOQ"
+          class="c6"
         >
           julian@fmail.com
         </span>
       </div>
       <div
-        class="sc-fzXfLV bdnQth"
+        class="c7"
       >
         <div
-          class="sc-fzXfLW sc-fzXfMv bhednH"
+          class="sc-fzXfLW c8"
         >
           <img
             alt="avatar"
-            class="sc-fzXfLX eSUZVR"
+            class="c9 c10"
             src="https://cdn4.iconfinder.com/data/icons/professional-avatar-5/48/Public_relation_avatar_women_woman_profile_character_professions_2-512.png"
           />
         </div>
         <div
-          class="sc-fzXfLW sc-fzXfMw fwnIKr"
+          class="sc-fzXfLW c11"
         >
           <img
             alt="Płeć"
-            class="sc-fzXfLX eSUZVR"
+            class="c9 c10"
             src="femaleIcon.svg"
             title="Kobieta"
           />
@@ -144,14 +690,14 @@ Array [
       </div>
     </div>
     <div
-      class="sc-fzXfMx fOCSDN"
+      class="c12"
     >
       <div
-        class="sc-fzXfMy bZutzM"
+        class="c13"
       >
         <img
           alt="Miejsce zamieszkania"
-          class="sc-fzXfMz kkJXQX"
+          class="c14"
           src="placeIcon.svg"
         />
         <p>
@@ -165,7 +711,7 @@ Array [
         </p>
       </div>
       <button
-        class="sc-fzXfLO sc-fzXfMA jsOZdh"
+        class="sc-fzXfLO c15"
         disabled=""
         title="Więcej informacji"
         type="button"

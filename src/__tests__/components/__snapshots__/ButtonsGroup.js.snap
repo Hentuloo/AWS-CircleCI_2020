@@ -1,9 +1,178 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ButtonsGroup component mocked buttons snapshot 1`] = `
+.c5 {
+  position: absolute;
+  max-width: 35%;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: block;
+  background-color: transparent;
+  -webkit-transform: translate(-50%,0%);
+  -ms-transform: translate(-50%,0%);
+  transform: translate(-50%,0%);
+}
+
+.c6 {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.c3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.2s 0.15s linear;
+  transition: opacity 0.2s 0.15s linear;
+}
+
+.c3 .c4:nth-of-type(1) {
+  left: 50%;
+  top: -1%;
+}
+
+.c3 .c4:nth-of-type(2) {
+  left: 22%;
+  bottom: 4%;
+}
+
+.c3 .c4:nth-of-type(3) {
+  right: 22%;
+  bottom: 4%;
+  -webkit-transform: translate(50%,0%);
+  -ms-transform: translate(50%,0%);
+  transform: translate(50%,0%);
+}
+
+.c0 {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin: -10px auto;
+}
+
+.c0:hover::before,
+.c0:active::before,
+.c0:focus::before {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.c0:hover::after,
+.c0:active::after,
+.c0:focus::after {
+  -webkit-transform: scale(0.46);
+  -ms-transform: scale(0.46);
+  transform: scale(0.46);
+}
+
+.c0:hover .c2,
+.c0:active .c2,
+.c0:focus .c2 {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.c0::before,
+.c0::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  border-radius: 50%;
+  background-color: rgb(116,171,179);
+  z-index: -1;
+  -webkit-transition: -webkit-transform 0.4s ease;
+  -webkit-transition: transform 0.4s ease;
+  transition: transform 0.4s ease;
+  -webkit-transform: scale(0.65);
+  -ms-transform: scale(0.65);
+  transform: scale(0.65);
+}
+
+.c0::after {
+  background-color: rgb(70,147,158);
+}
+
+.c1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 1.35em;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  color: white;
+}
+
+@media (min-width:768px) {
+  .c5:focus {
+    outline: 0;
+  }
+}
+
+@media (min-width:768px) {
+  .c3 .c4:nth-of-type(1) {
+    top: -4%;
+  }
+}
+
+@media (min-width:768px) {
+  .c3 .c4:nth-of-type(2) {
+    left: 20%;
+  }
+}
+
+@media (min-width:768px) {
+  .c3 .c4:nth-of-type(3) {
+    right: 22%;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    margin: 5px auto;
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (min-width:768px) {
+  .c0:hover::before,
+  .c0:active::before,
+  .c0:focus::before {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width:768px) {
+  .c0:hover::after,
+  .c0:active::after,
+  .c0:focus::after {
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+}
+
+@media (min-width:768px) {
+
+}
+
 <div>
   <div
-    class="sc-AykKF fuJTRO"
+    class="c0"
   >
     <p
       class="sr-only"
@@ -11,16 +180,16 @@ exports[`ButtonsGroup component mocked buttons snapshot 1`] = `
       nice checkbox blah
     </p>
     <div
-      class="sc-AykKG fRUjnM"
+      class="c1"
       data-testid="onActive-text"
     >
       my text from default button
     </div>
     <div
-      class="sc-AykKE ilvNqw"
+      class="c2 c3"
     >
       <button
-        class="sc-AykKC jQIKqH"
+        class="c4 c5"
         title="some first value"
         type="button"
       >
@@ -31,12 +200,12 @@ exports[`ButtonsGroup component mocked buttons snapshot 1`] = `
         </span>
         <img
           alt="some first value"
-          class="sc-AykKD cnMsrC"
+          class="c6"
           src="nice icon"
         />
       </button>
       <button
-        class="sc-AykKC jQIKqH"
+        class="c4 c5"
         title="add some sorter"
         type="button"
       >
@@ -47,12 +216,12 @@ exports[`ButtonsGroup component mocked buttons snapshot 1`] = `
         </span>
         <img
           alt="add some sorter"
-          class="sc-AykKD cnMsrC"
+          class="c6"
           src="nice icon2"
         />
       </button>
       <button
-        class="sc-AykKC jQIKqH"
+        class="c4 c5"
         title="add some other sorter"
         type="button"
       >
@@ -63,7 +232,7 @@ exports[`ButtonsGroup component mocked buttons snapshot 1`] = `
         </span>
         <img
           alt="add some other sorter"
-          class="sc-AykKD cnMsrC"
+          class="c6"
           src="nice icon3"
         />
       </button>

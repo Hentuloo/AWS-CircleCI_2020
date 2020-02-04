@@ -2,6 +2,7 @@ import React from 'react';
 import ButtonsGroup from 'components/ButtonsGroup/ButtonsGroup';
 import { withTheme } from 'config/testUtils';
 import { fireEvent } from '@testing-library/react';
+import 'jest-styled-components';
 
 const elementWithActiveText = 'onActive-text';
 
