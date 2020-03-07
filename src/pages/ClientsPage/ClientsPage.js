@@ -68,7 +68,7 @@ const App = () => {
   return (
     <Wrapper>
       <Bar>
-        <BarTitle>Klienci</BarTitle>
+        <BarTitle>Klienci2</BarTitle>
       </Bar>
       <Content>
         <FilterControlers
